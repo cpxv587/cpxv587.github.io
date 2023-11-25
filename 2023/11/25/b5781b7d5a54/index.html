@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>【工业机器人】第二次作业 | cpx的窝</title><meta name="author" content="cpx,cpxv587@elapse.fun"><meta name="copyright" content="cpx"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="直接搬了老师给的参考答案，做了部分修改。  1. 课本P66-68，参考J1和J2轴的电机、减速机校核方法，计算J3轴、J4轴的最大负载转矩和最大负载惯量，并从转速、转矩和惯量三方面校核J3和J4轴电机、减速机的选型结果。（J4轴只需校核转速和转动惯量，不需要计算和校核转矩。校核J4轴转动惯量时，假设小臂质量G2集中在绕J4轴半径为70mm的圆周上。）   image-202311">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【工业机器人】第二次作业">
+<meta property="og:url" content="http://elapse.fun/2023/11/25/b5781b7d5a54/index.html">
+<meta property="og:site_name" content="cpx的窝">
+<meta property="og:description" content="直接搬了老师给的参考答案，做了部分修改。  1. 课本P66-68，参考J1和J2轴的电机、减速机校核方法，计算J3轴、J4轴的最大负载转矩和最大负载惯量，并从转速、转矩和惯量三方面校核J3和J4轴电机、减速机的选型结果。（J4轴只需校核转速和转动惯量，不需要计算和校核转矩。校核J4轴转动惯量时，假设小臂质量G2集中在绕J4轴半径为70mm的圆周上。）   image-202311">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2023-11-25T15:01:14.000Z">
+<meta property="article:modified_time" content="2023-11-25T15:06:54.082Z">
+<meta property="article:author" content="cpx">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://elapse.fun/2023/11/25/b5781b7d5a54/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.27/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2.1.2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '【工业机器人】第二次作业',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-11-25 23:06:54'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/psc2.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">cpx的窝</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【工业机器人】第二次作业</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-11-25T15:01:14.000Z" title="发表于 2023-11-25 23:01:14">2023-11-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-25T15:06:54.082Z" title="更新于 2023-11-25 23:06:54">2023-11-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="【工业机器人】第二次作业"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>直接搬了老师给的参考答案，做了部分修改。</p>
+</blockquote>
+<h2
+id="课本p66-68参考j1和j2轴的电机减速机校核方法计算j3轴j4轴的最大负载转矩和最大负载惯量并从转速转矩和惯量三方面校核j3和j4轴电机减速机的选型结果j4轴只需校核转速和转动惯量不需要计算和校核转矩校核j4轴转动惯量时假设小臂质量g2集中在绕j4轴半径为70mm的圆周上">1.
+课本P66-68，参考J1和J2轴的电机、减速机校核方法，计算J3轴、J4轴的最大负载转矩和最大负载惯量，并从转速、转矩和惯量三方面校核J3和J4轴电机、减速机的选型结果。（J4轴只需校核转速和转动惯量，不需要计算和校核转矩。校核J4轴转动惯量时，假设小臂质量G2集中在绕J4轴半径为70mm的圆周上。）</h2>
+<figure>
+<img
+src="https://raw.githubusercontent.com/cpxv587/blogimg/main/202311252301837.png"
+alt="image-20231125222008387" />
+<figcaption aria-hidden="true">image-20231125222008387</figcaption>
+</figure>
+<p>（1）核算J3轴</p>
+<p>J3 轴电机直接驱动J3轴减速器带动小臂俯仰。减速器减速比<span
+class="math inline">\(i=80\)</span>。</p>
+<p>（a）核算转速要求</p>
+<p>J3轴减速器输出给小臂的额定转速=2000/80×6=150 ((°)/s)</p>
+<p>J3轴减速器输出给小臂的最高转速=3000/80×6=225 ((°)/s)</p>
+<p>J3轴减速器带动小臂转动性能参数中要求最大转速为 163(°)/s。</p>
+<p><strong>J3轴减速器输出给小臂的最高转速大于性能参数的最高转速设计值，满足转速要求。</strong></p>
+<p>（b）核算负载要求</p>
+<p>J3轴受到的最大负载转矩：$ M=G_2gL_6+Gg( R-H_2 ) =616 , $</p>
+<p>J3轴电机的输出转矩为14.3Nm，经减速器放大后的输出给小臂的转矩14.3×80=1144
+Nm，大于受到的最大负载转矩，<strong>满足要求。</strong></p>
+<p>（c）核算转动惯量要求</p>
+<p>J3轴受到的最大负载转动惯量：$ J_3=G_2^2+G( R-H_2 ) ^2=55.1 ,^2 $</p>
+<p>J3轴电机转子转动惯量为$ 14<sup>{-4},,</sup>2 <span
+class="math inline">\(，减速器减速比为80，经减速器后J3轴输出的转动惯量为\)</span>
+14<sup>{-4}</sup>2=8.96 ,^2 $。</p>
+<p>J3轴受到的最大负载转动惯量与输出转动惯量比值为
+55.1/8.96=6.1，小于选用的松下 MDME502S1H 伺服电机推荐的惯量比值
+10，<strong>输出惯量满足要求。</strong></p>
+<p>（2）核算J4轴</p>
+<p>J4轴电机通过齿轮啮合(减速比 65：38）驱动 J4
+轴减速器带动小臂回转，综合减速比$ i=65/38=51.7 $。</p>
+<p>（a）核算转速要求</p>
+<p>J4轴减速器输出给小臂的额定转速=2 000/51.7×6=232 ((°)/s)</p>
+<p>J4轴减速器输出给小臂的最高转速=3 000/51.7×6=348 ((°)/s)</p>
+<p>J4轴减速器带动小臂转动性能参数中要求最大转速为 230(°)/s。</p>
+<p><strong>J4轴减速器输出给小臂的最高转速大于性能参数的最高转速设计值，满足转速要求。</strong></p>
+<p>（b）核算负载要求</p>
+<p>J4轴受到的最大负载不影响J4轴的回转，不需核算J4轴的输出转矩，必然<strong>满足要求。</strong></p>
+<p>（c）核算转动惯量要求</p>
+<p>J4轴受到的最大负载转动惯量（回转惯量），假设不考虑末端载荷的尺寸，则：<span
+class="math inline">\(J_4=G_2\times r^2=50\times 0.07^2=0.245
+\,\mathrm{kg}\cdot \mathrm{m}^2\)</span></p>
+<p>J4轴电机转子转动惯量为$ 7.9 <sup>{-4},,</sup>2 <span
+class="math inline">\(，减速器减速比为51.7，经减速器后J4轴输出的转动惯量为\)</span>
+7.9^{-4}=2.115 ^2 $</p>
+<p>J4轴受到的最大负载转动惯量与输出转动惯量比值为
+0.245/2.115=0.116，远小于选用的松下 MDME502S1H
+伺服电机推荐的惯量比值10，<strong>输出惯量满足要求。</strong></p>
+<h1
+id="按照国标gbt-12642-2001工业机器人的性能指标规定的位置准确度给定工业前几任一个指令位置p-c点为123425以激光跟踪仪为测量工具测出10组实到位置数据如下表求出位置准确度ap-p">2.
+按照国标GB/T
+12642-2001，工业机器人的性能指标规定的位置准确度，给定工业前几任一个指令位置<em>P</em>
+c点为（12,34,25），以激光跟踪仪为测量工具，测出10组实到位置数据，如下表，求出位置准确度<em>AP</em>
+p。</h1>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">j</th>
+<th style="text-align: center;"><span
+class="math inline">\(X_j\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(Y_j\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(Z_j\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">12.001</td>
+<td style="text-align: center;">33.997</td>
+<td style="text-align: center;">24.996</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">11.98</td>
+<td style="text-align: center;">33.989</td>
+<td style="text-align: center;">24.989</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">12.010</td>
+<td style="text-align: center;">34.002</td>
+<td style="text-align: center;">24.993</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">12.011</td>
+<td style="text-align: center;">34.007</td>
+<td style="text-align: center;">25.004</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">12.003</td>
+<td style="text-align: center;">33.992</td>
+<td style="text-align: center;">25.010</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">12.007</td>
+<td style="text-align: center;">33.995</td>
+<td style="text-align: center;">25.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">12.013</td>
+<td style="text-align: center;">33.998</td>
+<td style="text-align: center;">24.999</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">11.999</td>
+<td style="text-align: center;">34.005</td>
+<td style="text-align: center;">25.012</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">11.986</td>
+<td style="text-align: center;">34.010</td>
+<td style="text-align: center;">25.007</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">11.995</td>
+<td style="text-align: center;">34.009</td>
+<td style="text-align: center;">25.008</td>
+</tr>
+</tbody>
+</table>
+<p>$ {X}=_{j=1}^n{X_j}=12.0005 $</p>
+<p>$ {Y}=_{j=1}^n{Y_j}=34.0004 $</p>
+<p>$ {Z}=_{j=1}^n{Z_j}=34.0004 $ <span class="math display">\[
+AP_{\mathrm{p}}=\sqrt{(\bar{X}-X_c)^2+(\bar{Y}-Y_c)^2+(\bar{Z}-Z_c)^2}=\sqrt{0.0005^2+0.0004^2+0.0019^2}=0.002
+\]</span> 注：关于转速，实际应用中一般低于设计的最高转速运行。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://elapse.fun">cpx</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://elapse.fun/2023/11/25/b5781b7d5a54/">http://elapse.fun/2023/11/25/b5781b7d5a54/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://elapse.fun" target="_blank">cpx的窝</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/10/20/1005b91532f6/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【工业机器人】第一次作业</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/psc2.gif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">cpx</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/cpxv587"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">试运行</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E6%9C%ACp66-68%E5%8F%82%E8%80%83j1%E5%92%8Cj2%E8%BD%B4%E7%9A%84%E7%94%B5%E6%9C%BA%E5%87%8F%E9%80%9F%E6%9C%BA%E6%A0%A1%E6%A0%B8%E6%96%B9%E6%B3%95%E8%AE%A1%E7%AE%97j3%E8%BD%B4j4%E8%BD%B4%E7%9A%84%E6%9C%80%E5%A4%A7%E8%B4%9F%E8%BD%BD%E8%BD%AC%E7%9F%A9%E5%92%8C%E6%9C%80%E5%A4%A7%E8%B4%9F%E8%BD%BD%E6%83%AF%E9%87%8F%E5%B9%B6%E4%BB%8E%E8%BD%AC%E9%80%9F%E8%BD%AC%E7%9F%A9%E5%92%8C%E6%83%AF%E9%87%8F%E4%B8%89%E6%96%B9%E9%9D%A2%E6%A0%A1%E6%A0%B8j3%E5%92%8Cj4%E8%BD%B4%E7%94%B5%E6%9C%BA%E5%87%8F%E9%80%9F%E6%9C%BA%E7%9A%84%E9%80%89%E5%9E%8B%E7%BB%93%E6%9E%9Cj4%E8%BD%B4%E5%8F%AA%E9%9C%80%E6%A0%A1%E6%A0%B8%E8%BD%AC%E9%80%9F%E5%92%8C%E8%BD%AC%E5%8A%A8%E6%83%AF%E9%87%8F%E4%B8%8D%E9%9C%80%E8%A6%81%E8%AE%A1%E7%AE%97%E5%92%8C%E6%A0%A1%E6%A0%B8%E8%BD%AC%E7%9F%A9%E6%A0%A1%E6%A0%B8j4%E8%BD%B4%E8%BD%AC%E5%8A%A8%E6%83%AF%E9%87%8F%E6%97%B6%E5%81%87%E8%AE%BE%E5%B0%8F%E8%87%82%E8%B4%A8%E9%87%8Fg2%E9%9B%86%E4%B8%AD%E5%9C%A8%E7%BB%95j4%E8%BD%B4%E5%8D%8A%E5%BE%84%E4%B8%BA70mm%E7%9A%84%E5%9C%86%E5%91%A8%E4%B8%8A"><span class="toc-number">1.</span> <span class="toc-text">1.
+课本P66-68，参考J1和J2轴的电机、减速机校核方法，计算J3轴、J4轴的最大负载转矩和最大负载惯量，并从转速、转矩和惯量三方面校核J3和J4轴电机、减速机的选型结果。（J4轴只需校核转速和转动惯量，不需要计算和校核转矩。校核J4轴转动惯量时，假设小臂质量G2集中在绕J4轴半径为70mm的圆周上。）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%89%E7%85%A7%E5%9B%BD%E6%A0%87gbt-12642-2001%E5%B7%A5%E4%B8%9A%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87%E8%A7%84%E5%AE%9A%E7%9A%84%E4%BD%8D%E7%BD%AE%E5%87%86%E7%A1%AE%E5%BA%A6%E7%BB%99%E5%AE%9A%E5%B7%A5%E4%B8%9A%E5%89%8D%E5%87%A0%E4%BB%BB%E4%B8%80%E4%B8%AA%E6%8C%87%E4%BB%A4%E4%BD%8D%E7%BD%AEp-c%E7%82%B9%E4%B8%BA123425%E4%BB%A5%E6%BF%80%E5%85%89%E8%B7%9F%E8%B8%AA%E4%BB%AA%E4%B8%BA%E6%B5%8B%E9%87%8F%E5%B7%A5%E5%85%B7%E6%B5%8B%E5%87%BA10%E7%BB%84%E5%AE%9E%E5%88%B0%E4%BD%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%A6%82%E4%B8%8B%E8%A1%A8%E6%B1%82%E5%87%BA%E4%BD%8D%E7%BD%AE%E5%87%86%E7%A1%AE%E5%BA%A6ap-p"><span class="toc-number"></span> <span class="toc-text">2.
+按照国标GB&#x2F;T
+12642-2001，工业机器人的性能指标规定的位置准确度，给定工业前几任一个指令位置P
+c点为（12,34,25），以激光跟踪仪为测量工具，测出10组实到位置数据，如下表，求出位置准确度AP
+p。</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/11/25/b5781b7d5a54/" title="【工业机器人】第二次作业"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【工业机器人】第二次作业"/></a><div class="content"><a class="title" href="/2023/11/25/b5781b7d5a54/" title="【工业机器人】第二次作业">【工业机器人】第二次作业</a><time datetime="2023-11-25T15:01:14.000Z" title="发表于 2023-11-25 23:01:14">2023-11-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/20/1005b91532f6/" title="【工业机器人】第一次作业"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【工业机器人】第一次作业"/></a><div class="content"><a class="title" href="/2023/10/20/1005b91532f6/" title="【工业机器人】第一次作业">【工业机器人】第一次作业</a><time datetime="2023-10-20T12:26:25.000Z" title="发表于 2023-10-20 20:26:25">2023-10-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/18/f999205b5567/" title="机器人学第七章作业"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器人学第七章作业"/></a><div class="content"><a class="title" href="/2023/02/18/f999205b5567/" title="机器人学第七章作业">机器人学第七章作业</a><time datetime="2023-02-18T06:52:14.000Z" title="发表于 2023-02-18 14:52:14">2023-02-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/04/f3d48ed7528f/" title="机器人学第六章作业"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器人学第六章作业"/></a><div class="content"><a class="title" href="/2022/11/04/f3d48ed7528f/" title="机器人学第六章作业">机器人学第六章作业</a><time datetime="2022-11-04T13:46:04.000Z" title="发表于 2022-11-04 21:46:04">2022-11-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/04/ed9d7f53447e/" title="机器人学第五章作业"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器人学第五章作业"/></a><div class="content"><a class="title" href="/2022/11/04/ed9d7f53447e/" title="机器人学第五章作业">机器人学第五章作业</a><time datetime="2022-11-04T13:45:04.000Z" title="发表于 2022-11-04 21:45:04">2022-11-04</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By cpx</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.27/dist/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
