@@ -21,62 +21,51 @@ proxies:
 proxy-groups:
   - name: 当前节点
     proxies:
-      - 🇭🇰 HK [YxVM] 1Gbps
-      - 🇺🇸 US [Zgo]
+      - 🇺🇸 US [hjy]
     type: select
   - name: Telegram
     proxies:
-      - 🇭🇰 HK [YxVM] 1Gbps
-      - 🇺🇸 US [Zgo]
+      - 🇺🇸 US [hjy]
     type: select
   - name: ChatGPT
     proxies:
-      - 🇭🇰 HK [YxVM] 1Gbps
-      - 🇺🇸 US [Zgo]
+      - 🇺🇸 US [hjy]
     type: select
   - name: Youtube
     proxies:
-      - 🇭🇰 HK [YxVM] 1Gbps
-      - 🇺🇸 US [Zgo]
+      - 🇺🇸 US [hjy]
     type: select
   - name: Twitch
     proxies:
-      - 🇭🇰 HK [YxVM] 1Gbps
-      - 🇺🇸 US [Zgo]
+      - 🇺🇸 US [hjy]
     type: select
   - name: Netflix
     proxies:
-      - 🇭🇰 HK [YxVM] 1Gbps
-      - 🇺🇸 US [Zgo]
+      - 🇺🇸 US [hjy]
     type: select
   - name: Disney+
     proxies:
-      - 🇭🇰 HK [YxVM] 1Gbps
-      - 🇺🇸 US [Zgo]
+      - 🇺🇸 US [hjy]
     type: select
   - name: Steam
     proxies:
       - DIRECT
-      - 🇭🇰 HK [YxVM] 1Gbps
-      - 🇺🇸 US [Zgo]
+      - 🇺🇸 US [hjy]
     type: select
   - name: 国外媒体
     proxies:
-      - 🇭🇰 HK [YxVM] 1Gbps
-      - 🇺🇸 US [Zgo]
+      - 🇺🇸 US [hjy]
       - DIRECT
     type: select
   - name: Onedrive
     proxies:
       - DIRECT
-      - 🇭🇰 HK [YxVM] 1Gbps
-      - 🇺🇸 US [Zgo]
+      - 🇺🇸 US [hjy]
     type: select
   - name: 微软服务
     proxies:
       - DIRECT
-      - 🇭🇰 HK [YxVM] 1Gbps
-      - 🇺🇸 US [Zgo]
+      - 🇺🇸 US [hjy]
     type: select
   - name: 国内媒体
     proxies:
