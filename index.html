@@ -1,21 +1,121 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>cpx的窝</title><meta name="author" content="cpx,cpxv587@elapse.fun"><meta name="copyright" content="cpx"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
-<meta property="og:title" content="cpx的窝">
-<meta property="og:url" content="http://elapse.fun/index.html">
-<meta property="og:site_name" content="cpx的窝">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Biorobotics and Foldable Intelligence Laboratory - ��������������չ����ʵ����</title><meta name="author" content="BFI Lab"><meta name="copyright" content="BFI Lab"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Our lab is dedicated to curiosity, passion, and problem-solving. We focus on innovations in bioinspired soft robotics with origami-inspired foldability, including design, material, fabrication, actuat">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Biorobotics and Foldable Intelligence Laboratory">
+<meta property="og:url" content="http://bfilab.com/index.html">
+<meta property="og:site_name" content="Biorobotics and Foldable Intelligence Laboratory">
+<meta property="og:description" content="Our lab is dedicated to curiosity, passion, and problem-solving. We focus on innovations in bioinspired soft robotics with origami-inspired foldability, including design, material, fabrication, actuat">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://elapse.fun/img/psc2.gif">
-<meta property="article:author" content="cpx">
+<meta property="og:image" content="http://bfilab.com/img/log.svg">
+<meta property="article:author" content="BFI Lab">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://elapse.fun/img/psc2.gif"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://elapse.fun/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.27/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="http://bfilab.com/img/log.svg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Biorobotics and Foldable Intelligence Laboratory",
+  "alternateName": [
+    "��������������չ����ʵ����",
+    "bfilab.com"
+  ],
+  "url": "http://bfilab.com/"
+}</script><link rel="shortcut icon" href="/img/log.svg"><link rel="canonical" href="http://bfilab.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
   localSearch: undefined,
   translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
   copy: {
     success: '复制成功',
-    error: '复制错误',
+    error: '复制失败',
     noSupport: '浏览器不支持'
   },
   relativeDate: {
@@ -23,7 +123,7 @@
     post: false
   },
   runtime: '',
-  date_suffix: {
+  dateSuffix: {
     just: '刚刚',
     min: '分钟前',
     hour: '小时前',
@@ -31,299 +131,76 @@
     month: '个月前'
   },
   copyright: undefined,
-  lightbox: 'fancybox',
+  lightbox: 'null',
   Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2.1.2/dist/fjGallery.min.css'
-    }
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
   },
   isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'cpx的窝',
-  isPost: false,
-  isHome: true,
+  title: 'Biorobotics and Foldable Intelligence Laboratory',
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2025-09-20 00:52:57'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 8.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/psc2.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/banner.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">cpx的窝</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">cpx的窝</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2023/11/25/5b0d1d06edfb/" title="【工业机器人】第三次作业"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【工业机器人】第三次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/11/25/5b0d1d06edfb/" title="【工业机器人】第三次作业">【工业机器人】第三次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-25T15:15:37.000Z" title="发表于 2023-11-25 23:15:37">2023-11-25</time></span></div><div class="content">一、填空题
-
-控制系统按照不同的准则可分为多种类型，按照有无反馈环节可分为3类：
-开环控制系统、闭环控制系统和复合控制系统。
-伺服控制是机器人的底层控制器，主要用来控制机器人电机转动，从而实现关节运动。目前机器人伺服控制模式主要有3种：力控制、速度控制和位置控制。
-工程界对控制系统性能好坏的评价，主要有3个方面的基本要求：稳定性、准确性和快速性。这3个方面的要求中，稳定性是控制系统正常工作的首要条件。
-工业机器人的驱动系统按照动力来源基本上可分为3类：液压驱动、电机驱动和气动驱动。其中，由于控制精度高、能精确定位、反应灵敏，从而在中小负载、要求具有较高的位置控制精度、较高速度的机器人领域广泛应用的驱动系统是哪一个：电机驱动。
-机器人控制系统的构成主要包括2个功能单元：示教盒和控制柜。
-在机器人电控系统的设计中，“PC+运动控制器”的结构是主流的运动控制层解决方案，这种结构以工控机为平台，以开放式可编程运动控制器为控制核心。
-
-二、简述题
-1.
-写出PID控制器的控制规律方程和传递函数，并简述各控制项和常数。
-答：（1）控制规律方程 $$
-m\left( t  ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/11/25/b5781b7d5a54/" title="【工业机器人】第二次作业"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【工业机器人】第二次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/11/25/b5781b7d5a54/" title="【工业机器人】第二次作业">【工业机器人】第二次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-25T15:01:14.000Z" title="发表于 2023-11-25 23:01:14">2023-11-25</time></span></div><div class="content">
-直接搬了老师给的参考答案，做了部分修改。
-
-1.
-课本P66-68，参考J1和J2轴的电机、减速机校核方法，计算J3轴、J4轴的最大负载转矩和最大负载惯量，并从转速、转矩和惯量三方面校核J3和J4轴电机、减速机的选型结果。（J4轴只需校核转速和转动惯量，不需要计算和校核转矩。校核J4轴转动惯量时，假设小臂质量G2集中在绕J4轴半径为70mm的圆周上。）
-
-
-image-20231125222008387
-
-（1）核算J3轴
-J3 轴电机直接驱动J3轴减速器带动小臂俯仰。减速器减速比i = 80。
-（a）核算转速要求
-J3轴减速器输出给小臂的额定转速=2000/80×6=150 ((°)/s)
-J3轴减速器输出给小臂的最高转速=3000/80×6=225 ((°)/s)
-J3轴减速器带动小臂转动性能参数中要求最大转速为 163(°)/s。
-J3轴减速器输出给小臂的最高转速大于性能参数的最高转速设计值，满足转速要求。
-（b）核算负载要求
-J3轴受到的最大负载转矩：$ M=G_2gL_6+Gg( R-H_2 ) =616 , $
-J3轴电机的输出转矩为1 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/10/20/1005b91532f6/" title="【工业机器人】第一次作业"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【工业机器人】第一次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/10/20/1005b91532f6/" title="【工业机器人】第一次作业">【工业机器人】第一次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-20T12:26:25.000Z" title="发表于 2023-10-20 20:26:25">2023-10-20</time></span></div><div class="content">1.
-U = 6i + 4j + 3k，绕Z轴转90度后，再绕Y轴转90度，在上述基础上再平移(3,−1,5)。用齐次坐标变换求此矢量，并写出计算过程。
-设$^0P=( 6,4,3 ) $，由题可知
-$$
-\begin{aligned}
-^iP&amp;=Trans\left( 3,-1,5 \right) \cdot Rot\left( Y,90\degree \right)
-\cdot Rot\left( Z,90\degree \right) \cdot ^0P
-\\
-&amp;=\left[ \begin{matrix}
-    1&amp;      0&amp;      0&amp;      3\\
-    0&amp;      1&amp;      0&amp;      -1\\
-    0&amp;      0&amp;      1&amp;      5\\
-    0&amp;      0&amp;      0&amp;      1\\
-\end{matrix} \right] \left[ \begin{matrix} ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/02/18/f999205b5567/" title="机器人学第七章作业"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器人学第七章作业"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/02/18/f999205b5567/" title="机器人学第七章作业">机器人学第七章作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-18T06:52:14.000Z" title="发表于 2023-02-18 14:52:14">2023-02-18</time></span></div><div class="content">机器人学第七章作业
-一个单连杆转动关节机器人初始位置的关节角
-θ =  − 5∘，希望在
-4s 内平滑地将关节转动到 θ = 80∘的位置。求：
-完成此运动并且机器人停在目标位置的三次曲线方程，编程绘制关节的位置、速度和加速度随时间变化的函数；
-解：由题知，角度约束： $$
-\begin{cases}
-    \theta \left( 0 \right) =-5^\circ\\
-    \theta \left( t_f \right) =80^\circ\\
-\end{cases}
-$$ 因为平滑转动，速度约束： θ̇(0) = θ̇(tf) = 21.25
-由三次多项式的系数求解公式$\left\{\begin{array}{l}a_0=\theta_0 \\
-a_1=\dot{\theta}_0 \\
-a_2=\frac{3}{t_f^2}\left(\theta_f-\theta_0\right)-\frac{2}{t_f}
-\dot{\theta}_0-\frac{1}{t_f} \dot{\theta}_f \\
-a_3=-\frac{2}{ ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/11/04/f3d48ed7528f/" title="机器人学第六章作业"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器人学第六章作业"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/11/04/f3d48ed7528f/" title="机器人学第六章作业">机器人学第六章作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-11-04T13:46:04.000Z" title="发表于 2022-11-04 21:46:04">2022-11-04</time></span></div><div class="content">机器人学第六章作业
-分别用 Lagrange 法和 Newton-Euler
-法推导建立如图所示2自由度机器人的动力学方程。连杆质心位于连杆几何中心，其转动惯量分别为I1和I2。
-
-
-图1　2自由度机器人示意图
-
-Lagrange 法
-以图1中O − X0Y0Z0为极坐标系，连杆1的质心
-C 的位置是： $$
-\begin{cases}
-    x_1=\frac{1}{2}l_1\cos \theta _1\\
-    y_1=\frac{1}{2}l_1\sin \theta _1\\
-\end{cases}
-$$ 对上式相对于时间 t
-求导，可得质心 C 的速度是：
-$$
-\begin{cases}
-    \dot{x}_1=-\frac{1}{2}l_1\cos \theta _1\dot{\theta}_1\\
-    \dot{y}_1=\frac{1}{2}l_1\sin \theta _1\dot{\theta}_1\\
-\end{cases}
-$$ 连杆2的质心 D
-的位置是： $$
-\begin{cases}
-    ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/11/04/ed9d7f53447e/" title="机器人学第五章作业"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器人学第五章作业"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/11/04/ed9d7f53447e/" title="机器人学第五章作业">机器人学第五章作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-11-04T13:45:04.000Z" title="发表于 2022-11-04 21:45:04">2022-11-04</time></span></div><div class="content">机器人学第五章作业
-已知某型号6关节机器人的运动学雅克比矩阵 J
-如下所示。用该机器人在工件上钻孔，希望沿手坐标系 Z 轴产生 10N 的力，并绕 Z 轴产生150N ⋅ m的力矩，求需要的关节力和力矩。
-$$
-J=\left[ \begin{matrix}
-    20&amp;     0&amp;      0&amp;      0&amp;      0&amp;      0\\
-    -5&amp;     0&amp;      1&amp;      0&amp;      0&amp;      0\\
-    0&amp;      20&amp;     0&amp;      0&amp;      0&amp;      0\\
-    0&amp;      1&amp;      0&amp;      0&amp;      1&amp;      0\\
-    0&amp;      0&amp;      0&amp;      1&amp;      0&amp;      0\\
-    -1&amp;     0&am ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/09/28/dcf7ef60fe97/" title="【机器人学】第二次作业"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【机器人学】第二次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/28/dcf7ef60fe97/" title="【机器人学】第二次作业">【机器人学】第二次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-28T09:46:03.000Z" title="发表于 2022-09-28 17:46:03">2022-09-28</time></span></div><div class="content">
-为使公式能正常渲染，对部分细节有所调整，原文可点击附件查阅。
-
-第三章课后习题
-1.推导绕参考坐标系Y轴纯旋转的矩阵表示。
-
-
-image-20220927172744389
-
-
-图1　绕参考坐标系Y轴示意图
-
-证明：
-如图1所示，XYZ坐标系中，$\overrightarrow{OP}$ 旋转θ角到$\overrightarrow{OP^{\prime}}$的位置，根据三角函数关系，可以列出$\overrightarrow{OP}$ 与$\overrightarrow{OP^{\prime}}$的坐标表示形式：
-$$
-\begin{cases}
-    z^{\prime}=\left| OP \right|\cdot \cos \left( \alpha +\theta \right)
-=\left| OP \right|\cdot \left( \cos \alpha \cdot \cos \theta -\sin
-\alpha \cdot \sin \theta \right) =z\cdot \cos \theta -x\cdot \si ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/09/28/d450fbb3fdc9/" title="【机器人学】第一次作业"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【机器人学】第一次作业"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/28/d450fbb3fdc9/" title="【机器人学】第一次作业">【机器人学】第一次作业</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-28T09:42:40.000Z" title="发表于 2022-09-28 17:42:40">2022-09-28</time></span></div><div class="content">
-
-
-
-
-机器人作业1
-
-
-
-
-
-
-
-Fig. 1. Bird-inspired grasping mechanism design.
-
-
-
-
-
-Fig. 2. Sketch of the foot mechanism (only one of the claws is
-included).
-
-
-图2为脚部机构的简图，仅含其中一根爪子。
-
-
-由图1中(B)可知，该仿生机器人的腿是串联机构，属于通用多关节型，工作范围大，结构复杂，定位精度高。机器人的腿由一个上下平行的机构组成，以平行四边形方式折叠。弯曲腿趾的肌腱穿过腿部，并串联了一个弹簧。
-
-
-平面机构自由度计算公式
-
-
-
-
-
-
-
-式中：n——活动件个数；P_L——机构中低副个数；P_H——机构中高副个数。
-
-
-由上图1中(E)可知，活动构件由爪子、长杆以及连接件等组成，共15个；低副有15个；高副有1个。所以应用计算公式：
-
-
-
-
-
-
-
-所以该机构自由度为14。
-
-
- 
-
-
-
-</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/psc2.gif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">cpx</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/cpxv587"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">试运行</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/11/25/5b0d1d06edfb/" title="【工业机器人】第三次作业"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【工业机器人】第三次作业"/></a><div class="content"><a class="title" href="/2023/11/25/5b0d1d06edfb/" title="【工业机器人】第三次作业">【工业机器人】第三次作业</a><time datetime="2023-11-25T15:15:37.000Z" title="发表于 2023-11-25 23:15:37">2023-11-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/25/b5781b7d5a54/" title="【工业机器人】第二次作业"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【工业机器人】第二次作业"/></a><div class="content"><a class="title" href="/2023/11/25/b5781b7d5a54/" title="【工业机器人】第二次作业">【工业机器人】第二次作业</a><time datetime="2023-11-25T15:01:14.000Z" title="发表于 2023-11-25 23:01:14">2023-11-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/20/1005b91532f6/" title="【工业机器人】第一次作业"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【工业机器人】第一次作业"/></a><div class="content"><a class="title" href="/2023/10/20/1005b91532f6/" title="【工业机器人】第一次作业">【工业机器人】第一次作业</a><time datetime="2023-10-20T12:26:25.000Z" title="发表于 2023-10-20 20:26:25">2023-10-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/18/f999205b5567/" title="机器人学第七章作业"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器人学第七章作业"/></a><div class="content"><a class="title" href="/2023/02/18/f999205b5567/" title="机器人学第七章作业">机器人学第七章作业</a><time datetime="2023-02-18T06:52:14.000Z" title="发表于 2023-02-18 14:52:14">2023-02-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/04/f3d48ed7528f/" title="机器人学第六章作业"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器人学第六章作业"/></a><div class="content"><a class="title" href="/2022/11/04/f3d48ed7528f/" title="机器人学第六章作业">机器人学第六章作业</a><time datetime="2022-11-04T13:46:04.000Z" title="发表于 2022-11-04 21:46:04">2022-11-04</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">8</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-09-19T16:52:57.038Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2025 By cpx</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.27/dist/fancybox.umd.min.js"></script><div class="js-pjax"><script>function subtitleType () {
-  if (true) { 
-    window.typed = new Typed("#subtitle", {
-      strings: ["懒得细化了","冇，就真系冇；唔得，就真系唔得","cpxv587@robotic.ac"],
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/log.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/news/"><i class="fa-fw fa-solid fa-fire"></i><span> News</span></a></div><div class="menus_item"><a class="site-page" href="/rf/"><i class="fa-fw fa-solid fa-magnifying-glass"></i><span> Research Focus</span></a></div><div class="menus_item"><a class="site-page" href="/team/"><i class="fa-fw fa-solid fa-people-group"></i><span> Team</span></a></div><div class="menus_item"><a class="site-page" href="/publication/"><i class="fa-fw fa-solid fa-newspaper"></i><span> Publication</span></a></div><div class="menus_item"><a class="site-page" href="/join/"><i class="fa-fw fa-solid fa-user-plus"></i><span> Join us!</span></a></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fa-solid fa-address-card"></i><span> Contact</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/fengmian.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Biorobotics and Foldable Intelligence Laboratory</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/news/"><i class="fa-fw fa-solid fa-fire"></i><span> News</span></a></div><div class="menus_item"><a class="site-page" href="/rf/"><i class="fa-fw fa-solid fa-magnifying-glass"></i><span> Research Focus</span></a></div><div class="menus_item"><a class="site-page" href="/team/"><i class="fa-fw fa-solid fa-people-group"></i><span> Team</span></a></div><div class="menus_item"><a class="site-page" href="/publication/"><i class="fa-fw fa-solid fa-newspaper"></i><span> Publication</span></a></div><div class="menus_item"><a class="site-page" href="/join/"><i class="fa-fw fa-solid fa-user-plus"></i><span> Join us!</span></a></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fa-solid fa-address-card"></i><span> Contact</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Biorobotics and Foldable Intelligence Laboratory</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2025/09/06/News3/" title="刘思聪课题组成功举办Clawar2025技术研讨会Workshop on Advances in Soft Mobile Robots（软体移动机器人前沿技术研讨会）"><img class="post-bg" src="/img/news3/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="刘思聪课题组成功举办Clawar2025技术研讨会Workshop on Advances in Soft Mobile Robots（软体移动机器人前沿技术研讨会）"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/09/06/News3/" title="刘思聪课题组成功举办Clawar2025技术研讨会Workshop on Advances in Soft Mobile Robots（软体移动机器人前沿技术研讨会）">刘思聪课题组成功举办Clawar2025技术研讨会Workshop on Advances in Soft Mobile Robots（软体移动机器人前沿技术研讨会）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-09-06T12:15:39.000Z" title="发表于 2025-09-06 20:15:39">2025-09-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/News/">News</a></span></div><div class="content">2025年9月5日至9月7日，深圳技术大学组织的第28届攀爬和行走机器人国际会议（CLAWAR 2025）在深圳举办。本届大会设立的软体移动机器人分论坛在深圳技术大学C1-107会议室举办，南方科技大学刘吉、胡程志、王宏强、唐昭、万芳，中国科学院深圳先进技术研究院高兴，中山大学王萍等国内知名高校学者应邀作主题报告，南方科技大学机械与能源工程系系主任付成龙，哈尔滨工业大学（深圳）黄海林、冷雨泉，香港中文大学（深圳）孙正隆，深圳大学胡新尧和大湾区大学易娟等专家学者出席会议，李文贤教授与刘思聪副教授担任分会主席，刘思聪副教授主持会议。   刘思聪代表主办方致欢迎辞。他首先对各位专家学者的到来表示欢迎，并介绍了深圳技术大学近年来的发展情况。他指出，这次大会汇聚来自全球的顶尖学者、工程师及产业专家，共同围绕“AI赋能机器人运动与操作（AI Enabled Robotic Loco-Manipulation）”这一主题，展开深度交流与智慧碰撞，期待以本次大会为契机深化国际科研合作，并预祝大会取得圆满成功。    会议期间，胡程志等多位国内权威专家依次登台，分享最新研究成果与实践经验，为现场观...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/06/25/News2/" title="深圳技术大学中德智能制造学院刘思聪副教授团队在机器鱼肌肉激活机制研究中取得新进展"><img class="post-bg" src="/img/news2/4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="深圳技术大学中德智能制造学院刘思聪副教授团队在机器鱼肌肉激活机制研究中取得新进展"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/06/25/News2/" title="深圳技术大学中德智能制造学院刘思聪副教授团队在机器鱼肌肉激活机制研究中取得新进展">深圳技术大学中德智能制造学院刘思聪副教授团队在机器鱼肌肉激活机制研究中取得新进展</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-24T17:15:36.000Z" title="发表于 2025-06-25 01:15:36">2025-06-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/News/">News</a></span></div><div class="content">近日，深圳技术大学中德智能制造学院机器人工程系副教授刘思聪，与南方科技大学机器人研究院院长、英国皇家工程院院士戴建生，南方科技大学硕士研究生吴彪，香港大学-南方科技大学联合培养博士研究生黄超逸合作研究，提出了机器鱼节律性肌肉激活机制的功率分配策略 (Power Allocation Strategy, PAS)，显著提升了机器鱼的推进性能和能效，在仿生推进领域取得了重要进展。相关研究成果以“Rhythm-based power allocation strategy of bionic tail-flapping for propulsion enhancement”为题，发表在机器人领域国际顶级期刊IEEE Transactions on Robotics 上。          图1 鱼类通过节律性地激活肌肉产生游泳运动和推进力，而仿生机器鱼 DDRFishBot 可在更宽范围内切换驱动模式    随着海洋勘探需求的激增，其广阔的空间和固有的流体阻力对水下无人设备在长距离巡航和载荷能力等方面的运动性能构成了重大挑战。研究人员们从水生动物中汲取灵感，期望通过对鱼类摆尾机制的模仿...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/05/15/News1/" title="News | Congratulations to the six students from the lab on successfully defending their Ph.D. and Master’s theses!"><img class="post-bg" src="/img/news1/7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="News | Congratulations to the six students from the lab on successfully defending their Ph.D. and Master’s theses!"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/15/News1/" title="News | Congratulations to the six students from the lab on successfully defending their Ph.D. and Master’s theses!">News | Congratulations to the six students from the lab on successfully defending their Ph.D. and Master’s theses!</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-15T02:07:32.000Z" title="发表于 2025-05-15 10:07:32">2025-05-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/News/">News</a></span></div><div class="content">热烈祝贺同学们顺利通过博士、硕士毕业答辩！ On May 7th, Fang Zhonggui successfully defended his doctoral thesis. On May 8th, five Master’s students—Wu Biao, Tang Shaowu, Yang Wenjian, Wu Yige, and Lou Benkang—triumphed in their oral defenses. Join us in congratulating them all!      .photo-gallery {     display: flex;     flex-wrap: wrap; /* Allows photos to wrap to the next line */     justify-content: center; /* Horizontally centers the photos */     gap: 20px; /* Space between photos */     margin-top: 40px;   ...</div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/log.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">BFI Lab</div><div class="author-info-description">Our lab is dedicated to curiosity, passion, and problem-solving. We focus on innovations in bioinspired soft robotics with origami-inspired foldability, including design, material, fabrication, actuation, proprioception, modeling, and control. Join us in building intelligent machines that fundamentally transform human-robot coexistence.</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://scholar.google.com.hk/citations?user=smJe-2IAAAAJ&amp;hl=zh-CN"><i class="fa-brands fa-google-scholar"></i><span>Google Scholar</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome!</div></div><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/News/"><span class="card-category-list-name">News</span><span class="card-category-list-count">3</span></a></li>
+          </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-10-05T18:30:46.148Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By BFI Lab</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.0.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.1</a></span></div><div class="footer_custom_text">BFI Lab | Liu Sicong © 2025 Shenzhen, Guangdong Province, China</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.1"></script><script src="/js/main.js?v=5.5.1"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
       startDelay: 300,
       typeSpeed: 150,
       loop: true,
-      backSpeed: 50
-    })
-  } else {
-    document.getElementById("subtitle").innerHTML = '懒得细化了'
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["Welcome to BFI Lab @ SZTU!","仿生机器人与折展智能实验室"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
   }
 }
-
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
-  } else {
-    getScript('https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js').then(subtitleType)
-  }
-} else {
-  subtitleType()
-}</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["Welcome to BFI Lab @ SZTU!","仿生机器人与折展智能实验室"])
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
